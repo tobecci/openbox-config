@@ -25,3 +25,7 @@ feh --bg-fill /home/tobecci/Pictures/Wallpapers/Premium/geisha_i_by_7bpictures_d
 
 # clipboard manager
 clipit &
+
+
+# polkit agent
+polkit-dumb-agent &
