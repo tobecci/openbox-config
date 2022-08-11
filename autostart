@@ -26,6 +26,14 @@ feh --bg-fill /home/tobecci/Pictures/Wallpapers/Premium/geisha_i_by_7bpictures_d
 # clipboard manager
 clipit &
 
-
 # polkit agent
 polkit-dumb-agent &
+
+# start notification daemon
+dunst &
+
+# set nvidia to performance mode
+nvidia-settings -a '[gpu:0]/GPUPowerMizerMode=1'
+
+# start network manager applet
+nm-applet &

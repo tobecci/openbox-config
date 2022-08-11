@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Mikachu</name>
+    <name>Seven</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -330,30 +330,23 @@
         <command>alacritty</command>
       </action>
     </keybind>
-
-   <!-- rofi -->
-
+    <!-- rofi -->
     <keybind key="W-Tab">
       <action name="Execute">
         <command>rofi -show combi -combi-modi "windowcd" -modi combi</command>
       </action>
     </keybind>
-
     <keybind key="W-S-Tab">
       <action name="Execute">
         <command>rofi -show combi -combi-modi "window" -modi combi</command>
       </action>
     </keybind>
-
     <keybind key="W-space">
       <action name="Execute">
         <command>rofi -show combi -combi-modi "drun" -modi combi</command>
       </action>
     </keybind>
-
-   <!-- / rofi  -->
-
-
+    <!-- / rofi  -->
     <keybind key="W-e">
       <action name="Execute">
         <command>pcmanfm</command>
@@ -385,13 +378,22 @@
         <command>blueman-manager</command>
       </action>
     </keybind>
-        <keybind key="W-S-b">
+    <keybind key="W-S-b">
       <action name="Execute">
         <command>pavucontrol</command>
       </action>
     </keybind>
+    <keybind key="W-S-s">
+      <action name="Execute">
+        <command>sh ~/.scripts/screenshot_to_clipboard</command>
+      </action>
+    </keybind>
+     <keybind key="W-S-z">
+      <action name="Execute">
+        <command>systemctl  suspend</command>
+      </action>
+    </keybind>
     <!-- / app shortcuts -->
-
     <!-- window shortcuts -->
     <keybind key="W-r">
       <action name="Resize">
@@ -405,87 +407,87 @@
       <action name="Close">
       </action>
     </keybind>
-
     <keybind key="W-m">
       <action name="ToggleMaximize">
       </action>
     </keybind>
-
-      <keybind key="W-a">
+    <keybind key="W-a">
       <action name="ToggleAlwaysOnTop"/>
     </keybind>
-
-     <keybind key="W-S-a">
+    <keybind key="W-S-a">
       <action name="ToggleOmnipresent">
       </action>
     </keybind>
-
     <keybind key="W-f">
       <action name="ToggleFullscreen">
       </action>
     </keybind>
-
     <keybind key="W-S-1">
-    <action name="SendToDesktop"><to>1</to></action>
+      <action name="SendToDesktop">
+        <to>1</to>
+      </action>
     </keybind>
-
     <keybind key="W-S-2">
-    <action name="SendToDesktop"><to>2</to></action>
+      <action name="SendToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop">
+        <to>4</to>
+      </action>
     </keybind>
 
-       <keybind key="W-S-3">
-    <action name="SendToDesktop"><to>3</to></action>
+<!-- 
+    <keybind key="W-S-C-Right">
+      <action name="DirectionalalCycleWindows"><direction>east</direction><dialog>yes</dialog></action>
     </keybind>
 
-       <keybind key="W-S-4">
-    <action name="SendToDesktop"><to>4</to></action>
-    </keybind>
-
+    <keybind key="W-S-C-Left">
+      <action name="PreviousWindow">
+      </action>
+    </keybind> -->
     
-
     <!-- / window shortcuts  -->
 
-<!-- <action name="ToggleOmnipresent"/> -->
-
-
-      <!-- desktop shortcuts -->
+    
+    <!-- desktop shortcuts -->
     <keybind key="W-Left">
       <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
+        <to>previous</to>
+      </action>
     </keybind>
     <keybind key="W-Right">
       <action name="GoToDesktop">
-          <to>next</to>
-        </action>
+        <to>next</to>
+      </action>
     </keybind>
-
     <keybind key="W-1">
       <action name="GoToDesktop">
-          <to>1</to>
-        </action>
+        <to>1</to>
+      </action>
     </keybind>
-
-     <keybind key="W-2">
+    <keybind key="W-2">
       <action name="GoToDesktop">
-          <to>2</to>
-        </action>
+        <to>2</to>
+      </action>
     </keybind>
-
     <keybind key="W-3">
       <action name="GoToDesktop">
-          <to>3</to>
-        </action>
+        <to>3</to>
+      </action>
     </keybind>
-
     <keybind key="W-4">
       <action name="GoToDesktop">
-          <to>4</to>
-        </action>
+        <to>4</to>
+      </action>
     </keybind>
-
     <!-- / desktop shortcuts  -->
-
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
@@ -499,8 +501,6 @@
     <screenEdgeWarpMouse>false</screenEdgeWarpMouse>
     <!-- Set this to TRUE to move the mouse pointer across the desktop when
        switching due to hitting the edge of the screen -->
-
-
     <!-- this affects mouse and click actions inside a window  -->
     <context name="Frame">
       <!-- <mousebind button="A-Left" action="Press">
@@ -748,7 +748,6 @@
         <action name="Close"/>
       </mousebind>
     </context>
-
     <!-- section below controls mouse scrolls on desktop  -->
     <context name="Desktop">
       <!-- <mousebind button="Up" action="Click">
